@@ -1,80 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Fabrice Paida | Portfolio</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrice Paida | Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-    <h1>🚀 Fabrice Paida</h1>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">🚀 Fabrice Paida</h1>
 
-<section class="hero">
-
-    <div class="hero-text">
-        <h1>Hi, I'm Fabrice Paida 👋</h1>
-
-        <h2 class="role">
-            Linux • DevOps • Cloud Engineer (In Progress)
-        </h2>
-
-        <p>
-            IT professional with 15+ years of experience in data center operations, 
-            networking, and infrastructure. Currently building hands-on expertise 
-            in Linux, DevOps, and Cloud technologies.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="docs/Fabrice_Paida_Resume_2026.pdf" class="btn" target="_blank">
-                📄 View Resume
-            </a>
-
-            <a href="contact.html" class="btn-outline">
-                📞 Contact Me
-            </a>
-
-            <a href="https://fpaida.com/" class="btn-outline" target="_blank">
-                🌐 Visit My Website
-            </a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
-    </div>
+    </nav>
+</header>
 
-    <div class="hero-image">
-        <img src="images/profile.png" alt="Fabrice Paida">
+<!-- HOME SECTION -->
+<section id="home" class="section hero">
+
+    <img src="images/profile.png" alt="Fabrice Paida" class="profile-pic">
+
+    <h2>Hi, I'm Fabrice Paida 👋</h2>
+
+    <p style="color:#38bdf8; font-weight:600;">
+        Currently open to opportunities
+    </p>
+
+    <p>
+        IT professional with 15+ years of experience in data center operations,
+        networking, and infrastructure.
+    </p>
+
+    <!-- ACTION BUTTONS -->
+    <div class="buttons" role="navigation" aria-label="Primary actions">
+
+        <a href="docs/Fabrice_Paida_Resume_2026.pdf"
+           class="btn primary"
+           target="_blank"
+           rel="noopener noreferrer">
+            📄 Resume
+        </a>
+
+        <a href="#contact"
+           class="btn secondary">
+            📞 Contact
+        </a>
+
+        <a href="https://fpaida.com"
+           class="btn secondary"
+           target="_blank"
+           rel="noopener noreferrer">
+            🌐 Business
+        </a>
+
     </div>
 
 </section>
 
-<section class="terminal-box">
-    <h3>💻 System Overview</h3>
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About Me</h2>
 
-    <pre class="terminal">
-$ whoami
-fabrice
+    <p>
+        Data Center Field Technician II with strong hands-on experience in
+        rack & stack, fiber optics, and network troubleshooting.
+    </p>
 
-$ role
-Data Center Technician | Network Engineer
-
-$ focus
-Linux | DevOps | Cloud
-
-$ status
-Building real-world portfolio projects 🚀
-    </pre>
-
+    <p>
+        Currently expanding skills in Linux system administration,
+        networking, and infrastructure automation.
+    </p>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Data Center Deployment</h3>
+        <p>Rack & stack, cabling, labeling, and infrastructure setup.</p>
+    </div>
+
+    <div class="card">
+        <h3>Fiber Troubleshooting</h3>
+        <p>Light level testing, cleaning, and loopback validation.</p>
+    </div>
+
+    <div class="card">
+        <h3>Linux Lab (RHEL)</h3>
+        <p>Built virtual lab for system administration and monitoring.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact</h2>
+
+    <p>Email: <a href="mailto:ffpaidas@gmail.com">ffpaidas@gmail.com</a></p>
+    <p>Phone: <a href="tel:+14438146589">+1 (443) 814-6589</a></p>
+
+    <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/fabrice-paida-13568046/" target="_blank">
+            View Profile
+        </a>
+    </p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-© 2026 Fabrice Paida | Linux • DevOps • Cloud
+    <p>&copy; 2026 Fabrice Paida</p>
 </footer>
 
 </body>
