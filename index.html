@@ -3,129 +3,589 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabrice Paida | Portfolio</title>
+    <meta
+        name="description"
+        content="Professional portfolio of Fabrice Paida, an infrastructure and telecommunications professional specializing in data centers, wireless networks, Linux, cloud computing, cybersecurity, and backend development."
+    >
+    <meta name="theme-color" content="#07101d">
+
+    <title>Fabrice Paida | Infrastructure, Cloud, Wireless & Software</title>
 
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
-
 <body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home" class="logo" aria-label="Fabrice Paida home">
+                <span class="logo-mark" aria-hidden="true">FP</span>
+                <span class="logo-text">Fabrice Paida</span>
+            </a>
 
-<!-- NAVBAR -->
-<header>
-    <nav class="navbar">
-        <h1 class="logo">🚀 Fabrice Paida</h1>
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                <span aria-hidden="true">☰</span>
+            </button>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-</header>
+            <div class="nav-links" id="nav-links">
+                <a href="#home" data-en="Home" data-fr="Accueil">Home</a>
+                <a href="#about" data-en="About" data-fr="À propos">About</a>
+                <a href="#experience" data-en="Experience" data-fr="Expérience">Experience</a>
+                <a href="#education" data-en="Education" data-fr="Formation">Education</a>
+                <a href="#skills" data-en="Skills" data-fr="Compétences">Skills</a>
+                <a href="#projects" data-en="Projects" data-fr="Projets">Projects</a>
+                <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
 
-<!-- HOME SECTION -->
-<section id="home" class="section hero">
+                <div class="language-switch" aria-label="Language selection">
+                    <button
+                        type="button"
+                        class="language-btn active"
+                        data-language="en"
+                        aria-label="Display website in English"
+                    >EN</button>
+                    <button
+                        type="button"
+                        class="language-btn"
+                        data-language="fr"
+                        aria-label="Afficher le site en français"
+                    >FR</button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <img src="images/profile.png" alt="Fabrice Paida" class="profile-pic">
+    <main>
+        <section id="home" class="section hero">
+            <div class="hero-content">
+                <div class="hero-image-wrapper">
+                    <img
+                        src="images/profile.png"
+                        alt="Professional portrait of Fabrice Paida"
+                        class="profile-pic"
+                    >
+                </div>
 
-    <h2>Hi, I'm Fabrice Paida 👋</h2>
+                <div class="hero-copy">
+                    <p
+                        class="eyebrow"
+                        data-en="Infrastructure • Cloud • Wireless • Software"
+                        data-fr="Infrastructure • Cloud • Télécommunications • Logiciels"
+                    >
+                        Infrastructure • Cloud • Wireless • Software
+                    </p>
 
-    <p style="color:#38bdf8; font-weight:600;">
-        Currently open to opportunities
-    </p>
+                    <h1 class="hero-name">Fabrice Paida</h1>
 
-    <p>
-        IT professional with 15+ years of experience in data center operations,
-        networking, and infrastructure.
-    </p>
+                    <p
+                        class="hero-title"
+                        data-en="Enterprise Infrastructure Engineer | Cloud | Linux | Wireless | Backend Development"
+                        data-fr="Ingénieur en infrastructure d’entreprise | Cloud | Linux | Réseaux mobiles | Développement backend"
+                    >
+                        Enterprise Infrastructure Engineer | Cloud | Linux | Wireless | Backend Development
+                    </p>
 
-    <!-- ACTION BUTTONS -->
-    <div class="buttons" role="navigation" aria-label="Primary actions">
+                    <p
+                        class="availability"
+                        data-en="Available for full-time, contract, consulting, and remote opportunities"
+                        data-fr="Disponible pour des postes à temps plein, des contrats, du conseil et du télétravail"
+                    >
+                        Available for full-time, contract, consulting, and remote opportunities
+                    </p>
 
-        <a href="docs/Fabrice_Paida_Resume_2026.pdf"
-           class="btn primary"
-           target="_blank"
-           rel="noopener noreferrer">
-            📄 Resume
-        </a>
+                    <p
+                        class="hero-description"
+                        data-en="IT and telecommunications professional with over 20 years of experience designing, deploying, and supporting enterprise infrastructure. Hands-on expertise includes data centers, wireless network modernization (3G, 4G LTE, and 5G), fiber optics, Linux administration, cloud computing, networking, cybersecurity, and backend API development."
+                        data-fr="Professionnel de l’informatique et des télécommunications avec plus de 20 ans d’expérience dans la conception, le déploiement et le support d’infrastructures d’entreprise. Mon expertise pratique couvre les centres de données, la modernisation des réseaux mobiles (3G, 4G LTE et 5G), la fibre optique, l’administration Linux, le cloud, les réseaux, la cybersécurité et le développement d’API backend."
+                    >
+                        IT and telecommunications professional with over 20 years of experience designing, deploying, and supporting enterprise infrastructure. Hands-on expertise includes data centers, wireless network modernization (3G, 4G LTE, and 5G), fiber optics, Linux administration, cloud computing, networking, cybersecurity, and backend API development.
+                    </p>
 
-        <a href="#contact"
-           class="btn secondary">
-            📞 Contact
-        </a>
+                    <div class="hero-buttons" aria-label="Primary actions">
+                        <a
+                            href="docs/Fabrice_Paida_Resume_2026.pdf"
+                            class="btn btn-primary"
+                                                     
+                        >
+                            <span class="btn-icon" aria-hidden="true">📄</span>
+                            <span class="btn-label" data-en="Download Resume" data-fr="Télécharger le CV">Download Resume</span>
+                        </a>
 
-        <a href="https://fpaida.com"
-           class="btn secondary"
-           target="_blank"
-           rel="noopener noreferrer">
-            🌐 Business
-        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span class="btn-icon" aria-hidden="true">🚀</span>
+                            <span class="btn-label" data-en="View Projects" data-fr="Voir les projets">View Projects</span>
+                        </a>
 
-    </div>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span class="btn-icon" aria-hidden="true">✉️</span>
+                            <span class="btn-label" data-en="Contact Me" data-fr="Me contacter">Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</section>
+        <section class="section stats-section" aria-label="Professional highlights">
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <strong>20+</strong>
+                    <span data-en="Years of Experience" data-fr="Années d’expérience">Years of Experience</span>
+                </article>
+                <article class="stat-card">
+                    <strong>3G–5G</strong>
+                    <span data-en="Wireless Modernization" data-fr="Modernisation des réseaux mobiles">Wireless Modernization</span>
+                </article>
+                <article class="stat-card">
+                    <strong>10+</strong>
+                    <span data-en="Technical Projects" data-fr="Projets techniques">Technical Projects</span>
+                </article>
+                <article class="stat-card">
+                    <strong>EN / FR</strong>
+                    <span data-en="Bilingual Professional" data-fr="Professionnel bilingue">Bilingual Professional</span>
+                </article>
+            </div>
+        </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-    <h2>About Me</h2>
+        <section id="about" class="section section-bordered">
+            <div class="section-heading">
+                <p class="section-kicker" data-en="Professional Profile" data-fr="Profil professionnel">Professional Profile</p>
+                <h2 data-en="About Me" data-fr="À propos de moi">About Me</h2>
+                <p
+                    data-en="A career built across telecommunications, wireless infrastructure, enterprise data centers, cloud, cybersecurity, and software development."
+                    data-fr="Un parcours construit dans les télécommunications, les réseaux mobiles, les centres de données, le cloud, la cybersécurité et le développement logiciel."
+                >
+                    A career built across telecommunications, wireless infrastructure, enterprise data centers, cloud, cybersecurity, and software development.
+                </p>
+            </div>
 
-    <p>
-        Data Center Field Technician II with strong hands-on experience in
-        rack & stack, fiber optics, and network troubleshooting.
-    </p>
+            <div class="about-grid">
+                <article class="content-card">
+                    <h3 data-en="Who I Am" data-fr="Qui je suis">Who I Am</h3>
+                    <p
+                        data-en="I began my career in telecommunications with Telecel Central African Republic and later supported large-scale wireless modernization projects in the United States for Sprint, T-Mobile, and Verizon. Today, I work in enterprise data center operations while expanding my expertise in Linux, AWS, DevOps, cybersecurity, and backend development."
+                        data-fr="J’ai commencé ma carrière dans les télécommunications chez Telecel Centrafrique, puis j’ai participé aux États-Unis à de grands projets de modernisation des réseaux mobiles pour Sprint, T-Mobile et Verizon. Aujourd’hui, je travaille dans les opérations de centres de données d’entreprise tout en développant mes compétences en Linux, AWS, DevOps, cybersécurité et développement backend."
+                    >
+                        I began my career in telecommunications with Telecel Central African Republic and later supported large-scale wireless modernization projects in the United States for Sprint, T-Mobile, and Verizon. Today, I work in enterprise data center operations while expanding my expertise in Linux, AWS, DevOps, cybersecurity, and backend development.
+                    </p>
+                    <p
+                        data-en="I am also the founder of Prime Tech Field Solutions LLC, a technology services company focused on telecommunications, data center support, fiber infrastructure, technical cleaning, and IT consulting."
+                        data-fr="Je suis également le fondateur de Prime Tech Field Solutions LLC, une entreprise de services technologiques spécialisée dans les télécommunications, le support de centres de données, la fibre optique, le nettoyage technique et le conseil informatique."
+                    >
+                        I am also the founder of Prime Tech Field Solutions LLC, a technology services company focused on telecommunications, data center support, fiber infrastructure, technical cleaning, and IT consulting.
+                    </p>
+                </article>
 
-    <p>
-        Currently expanding skills in Linux system administration,
-        networking, and infrastructure automation.
-    </p>
-</section>
+                <article class="content-card">
+                    <h3 data-en="Professional Highlights" data-fr="Points forts professionnels">Professional Highlights</h3>
+                    <ul class="check-list">
+                        <li data-en="Enterprise data center operations" data-fr="Opérations de centres de données d’entreprise">Enterprise data center operations</li>
+                        <li data-en="Sprint, T-Mobile, and Verizon wireless modernization" data-fr="Modernisation des réseaux mobiles Sprint, T-Mobile et Verizon">Sprint, T-Mobile, and Verizon wireless modernization</li>
+                        <li data-en="3G, 4G LTE, and 5G deployments" data-fr="Déploiements 3G, 4G LTE et 5G">3G, 4G LTE, and 5G deployments</li>
+                        <li data-en="Fiber installation, testing, and troubleshooting" data-fr="Installation, tests et dépannage de la fibre optique">Fiber installation, testing, and troubleshooting</li>
+                        <li data-en="Red Hat Enterprise Linux administration" data-fr="Administration Red Hat Enterprise Linux">Red Hat Enterprise Linux administration</li>
+                        <li data-en="AWS Cloud and DevOps training" data-fr="Formation AWS Cloud et DevOps">AWS Cloud and DevOps training</li>
+                        <li data-en="REST API and backend development" data-fr="Développement d’API REST et backend">REST API and backend development</li>
+                        <li data-en="Founder of Prime Tech Field Solutions LLC" data-fr="Fondateur de Prime Tech Field Solutions LLC">Founder of Prime Tech Field Solutions LLC</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-    <h2>Projects</h2>
+        <section id="experience" class="section section-bordered">
+            <div class="section-heading">
+                <p class="section-kicker" data-en="Career History" data-fr="Parcours professionnel">Career History</p>
+                <h2 data-en="Professional Journey" data-fr="Parcours professionnel">Professional Journey</h2>
+                <p
+                    data-en="My progression from telecommunications and wireless networks to enterprise data centers, cybersecurity, cloud, and software engineering."
+                    data-fr="Mon évolution des télécommunications et des réseaux mobiles vers les centres de données, la cybersécurité, le cloud et le génie logiciel."
+                >
+                    My progression from telecommunications and wireless networks to enterprise data centers, cybersecurity, cloud, and software engineering.
+                </p>
+            </div>
 
-    <div class="card">
-        <h3>Data Center Deployment</h3>
-        <p>Rack & stack, cabling, labeling, and infrastructure setup.</p>
-    </div>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-year">2005–2016</div>
+                    <div class="timeline-content">
+                        <h3>Telecel Central African Republic</h3>
+                        <h4 data-en="Telecommunications Engineer" data-fr="Ingénieur en télécommunications">Telecommunications Engineer</h4>
+                        <p
+                            data-en="Began my professional career supporting GSM mobile network operations, wireless communications, telecommunications infrastructure deployment, installation, maintenance, and network troubleshooting. This experience established my foundation in carrier-grade telecommunications."
+                            data-fr="Début de ma carrière professionnelle dans le support des réseaux mobiles GSM, les communications sans fil, le déploiement des infrastructures télécoms, l’installation, la maintenance et le dépannage réseau. Cette expérience a établi ma base dans les télécommunications de niveau opérateur."
+                        >
+                            Began my professional career supporting GSM mobile network operations, wireless communications, telecommunications infrastructure deployment, installation, maintenance, and network troubleshooting. This experience established my foundation in carrier-grade telecommunications.
+                        </p>
+                    </div>
+                </article>
 
-    <div class="card">
-        <h3>Fiber Troubleshooting</h3>
-        <p>Light level testing, cleaning, and loopback validation.</p>
-    </div>
+                <article class="timeline-item">
+                    <div class="timeline-year">2017–2023</div>
+                    <div class="timeline-content">
+                        <h3>Sprint • T-Mobile • Verizon</h3>
+                        <h4 data-en="Wireless Infrastructure Engineer / Contractor" data-fr="Ingénieur / Contractuel en infrastructure mobile">Wireless Infrastructure Engineer / Contractor</h4>
+                        <p
+                            data-en="Worked on large-scale wireless network modernization projects across the United States. Responsibilities included site surveys, infrastructure assessments, equipment installation, integration, testing, troubleshooting, quality assurance, and support for 3G, 4G LTE, and 5G deployments."
+                            data-fr="Participation à de grands projets de modernisation des réseaux mobiles aux États-Unis. Les responsabilités comprenaient les études de sites, l’évaluation des infrastructures, l’installation et l’intégration des équipements, les tests, le dépannage, l’assurance qualité et le support des déploiements 3G, 4G LTE et 5G."
+                        >
+                            Worked on large-scale wireless network modernization projects across the United States. Responsibilities included site surveys, infrastructure assessments, equipment installation, integration, testing, troubleshooting, quality assurance, and support for 3G, 4G LTE, and 5G deployments.
+                        </p>
+                    </div>
+                </article>
 
-    <div class="card">
-        <h3>Linux Lab (RHEL)</h3>
-        <p>Built virtual lab for system administration and monitoring.</p>
-    </div>
-</section>
+                <article class="timeline-item">
+                    <div class="timeline-year">2023–Present</div>
+                    <div class="timeline-content">
+                        <h3>DataBank</h3>
+                        <h4 data-en="Data Center Technician II" data-fr="Technicien II en centre de données">Data Center Technician II</h4>
+                        <p
+                            data-en="Support enterprise data center operations for multiple customers. Responsibilities include rack and stack deployments, server installation, structured cabling, fiber infrastructure, hardware diagnostics, network equipment deployment, Linux-based systems, troubleshooting, and mission-critical infrastructure support."
+                            data-fr="Support des opérations de centres de données d’entreprise pour plusieurs clients. Les responsabilités comprennent les déploiements rack and stack, l’installation de serveurs, le câblage structuré, la fibre optique, le diagnostic matériel, le déploiement d’équipements réseau, les systèmes Linux, le dépannage et le support d’infrastructures critiques."
+                        >
+                            Support enterprise data center operations for multiple customers. Responsibilities include rack and stack deployments, server installation, structured cabling, fiber infrastructure, hardware diagnostics, network equipment deployment, Linux-based systems, troubleshooting, and mission-critical infrastructure support.
+                        </p>
+                    </div>
+                </article>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-    <h2>Contact</h2>
+                <article class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>Cydeo Institute</h3>
+                        <h4 data-en="SOC Analyst Training" data-fr="Formation d’analyste SOC">SOC Analyst Training</h4>
+                        <p
+                            data-en="Completed cybersecurity training covering SIEM, Security Operations Center procedures, threat detection, incident response, log analysis, investigation, and security monitoring."
+                            data-fr="Formation en cybersécurité couvrant les SIEM, les procédures de centre opérationnel de sécurité, la détection des menaces, la réponse aux incidents, l’analyse des journaux, l’investigation et la surveillance de sécurité."
+                        >
+                            Completed cybersecurity training covering SIEM, Security Operations Center procedures, threat detection, incident response, log analysis, investigation, and security monitoring.
+                        </p>
+                    </div>
+                </article>
 
-    <p>Email: <a href="mailto:ffpaidas@gmail.com">ffpaidas@gmail.com</a></p>
-    <p>Phone: <a href="tel:+14438146589">+1 (443) 814-6589</a></p>
+                <article class="timeline-item">
+                    <div class="timeline-year">2026–Present</div>
+                    <div class="timeline-content">
+                        <h3>Prime Tech Field Solutions LLC</h3>
+                        <h4 data-en="Founder & Infrastructure Consultant" data-fr="Fondateur et consultant en infrastructure">Founder & Infrastructure Consultant</h4>
+                        <p
+                            data-en="Founded PTFS to provide telecommunications support, enterprise infrastructure services, data center operations, fiber deployment, technical cleaning, network services, and IT consulting for commercial and enterprise customers."
+                            data-fr="Création de PTFS pour fournir des services de télécommunications, d’infrastructure d’entreprise, d’opérations de centres de données, de déploiement de fibre, de nettoyage technique, de réseaux et de conseil informatique aux clients commerciaux et entreprises."
+                        >
+                            Founded PTFS to provide telecommunications support, enterprise infrastructure services, data center operations, fiber deployment, technical cleaning, network services, and IT consulting for commercial and enterprise customers.
+                        </p>
+                    </div>
+                </article>
 
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/fabrice-paida-13568046/" target="_blank">
-            View Profile
-        </a>
-    </p>
-</section>
+                <article class="timeline-item">
+                    <div class="timeline-year">2026–Present</div>
+                    <div class="timeline-content">
+                        <h3>Unix Training Academy (UTA)</h3>
+                        <h4 data-en="Red Hat Completed • AWS & DevOps In Progress" data-fr="Red Hat terminé • AWS et DevOps en cours">Red Hat Completed • AWS & DevOps In Progress</h4>
+                        <p
+                            data-en="Completed Red Hat Enterprise Linux Administration training and currently advancing my skills in AWS Cloud, DevOps, infrastructure automation, CI/CD, containerization, backend API development, and software engineering."
+                            data-fr="Formation en administration Red Hat Enterprise Linux terminée. Développement actuel de mes compétences en AWS Cloud, DevOps, automatisation de l’infrastructure, CI/CD, conteneurisation, développement d’API backend et génie logiciel."
+                        >
+                            Completed Red Hat Enterprise Linux Administration training and currently advancing my skills in AWS Cloud, DevOps, infrastructure automation, CI/CD, containerization, backend API development, and software engineering.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-<!-- FOOTER -->
-<footer>
-    <p>&copy; 2026 Fabrice Paida</p>
-</footer>
+        <section id="education" class="section section-bordered">
+            <div class="section-heading">
+                <p class="section-kicker" data-en="Learning & Credentials" data-fr="Formation et qualifications">Learning & Credentials</p>
+                <h2 data-en="Education & Professional Development" data-fr="Formation académique et développement professionnel">Education & Professional Development</h2>
+                <p
+                    data-en="Formal education, industry certifications, and hands-on technical training supporting my continued professional growth."
+                    data-fr="Formation académique, certifications professionnelles et apprentissage pratique soutenant mon évolution continue."
+                >
+                    Formal education, industry certifications, and hands-on technical training supporting my continued professional growth.
+                </p>
+            </div>
 
+            <div class="education-grid">
+                <article class="content-card">
+                    <h3 data-en="🎓 Education" data-fr="🎓 Formation académique">🎓 Education</h3>
+
+                    <div class="education-item">
+                        <h4>Point Park University</h4>
+                        <span data-en="Current — Final two courses remaining" data-fr="En cours — Deux derniers cours à terminer">Current — Final two courses remaining</span>
+                        <p
+                            data-en="Bachelor’s Degree in Applied Computer Science — Networking & Security"
+                            data-fr="Licence en informatique appliquée — Réseaux et sécurité"
+                        >
+                            Bachelor’s Degree in Applied Computer Science — Networking & Security
+                        </p>
+                        <small data-en="Expected graduation: 2026" data-fr="Diplôme prévu : 2026">Expected graduation: 2026</small>
+                    </div>
+
+                    <div class="education-item">
+                        <h4>Community College of Allegheny County (CCAC)</h4>
+                        <span>2023–2025</span>
+                        <p
+                            data-en="Associate Degree in Cybersecurity & IT Support"
+                            data-fr="Diplôme associé en cybersécurité et support informatique"
+                        >
+                            Associate Degree in Cybersecurity & IT Support
+                        </p>
+                    </div>
+
+                    <div class="education-item">
+                        <h4>Institut Paradoxe — Congo-Brazzaville</h4>
+                        <span>2002–2004</span>
+                        <p
+                            data-en="Associate Degree in Network & Telecommunications"
+                            data-fr="Diplôme associé en réseaux et télécommunications"
+                        >
+                            Associate Degree in Network & Telecommunications
+                        </p>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <h3 data-en="📚 Professional Training" data-fr="📚 Formation professionnelle">📚 Professional Training</h3>
+
+                    <div class="education-item">
+                        <h4>Unix Training Academy (UTA)</h4>
+                        <span>2026–Present</span>
+                        <p data-en="Red Hat Enterprise Linux Administration — Completed" data-fr="Administration Red Hat Enterprise Linux — Terminée">Red Hat Enterprise Linux Administration — Completed</p>
+                        <p data-en="AWS Cloud — In Progress" data-fr="AWS Cloud — En cours">AWS Cloud — In Progress</p>
+                        <p data-en="DevOps Engineering — In Progress" data-fr="Ingénierie DevOps — En cours">DevOps Engineering — In Progress</p>
+                    </div>
+
+                    <div class="education-item">
+                        <h4>Cydeo Institute</h4>
+                        <span>2025</span>
+                        <p data-en="SOC Analyst Training" data-fr="Formation d’analyste SOC">SOC Analyst Training</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="certifications-block">
+                <h3 data-en="Professional Certifications" data-fr="Certifications professionnelles">Professional Certifications</h3>
+                <div class="cert-grid">
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">🌐</div>
+                        <h4>Cisco CCNA</h4>
+                        <p data-en="Cisco Certified Network Associate" data-fr="Cisco Certified Network Associate">Cisco Certified Network Associate</p>
+                        <span class="status status-completed" data-en="Completed" data-fr="Obtenue">Completed</span>
+                    </article>
+
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">🔒</div>
+                        <h4>CompTIA Security+</h4>
+                        <p data-en="Cybersecurity Certification" data-fr="Certification en cybersécurité">Cybersecurity Certification</p>
+                        <span class="status status-completed" data-en="Completed" data-fr="Obtenue">Completed</span>
+                    </article>
+
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">☁️</div>
+                        <h4>Microsoft AZ-900</h4>
+                        <p data-en="Azure Fundamentals" data-fr="Fondamentaux Azure">Azure Fundamentals</p>
+                        <span class="status status-completed" data-en="Completed" data-fr="Obtenue">Completed</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-bordered">
+            <div class="section-heading">
+                <p class="section-kicker" data-en="Core Capabilities" data-fr="Compétences principales">Core Capabilities</p>
+                <h2 data-en="Technical Skills" data-fr="Compétences techniques">Technical Skills</h2>
+                <p
+                    data-en="Technologies and operational capabilities developed through professional experience, education, and hands-on projects."
+                    data-fr="Technologies et capacités opérationnelles développées grâce à l’expérience professionnelle, aux études et aux projets pratiques."
+                >
+                    Technologies and operational capabilities developed through professional experience, education, and hands-on projects.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3 data-en="☁️ Cloud & DevOps" data-fr="☁️ Cloud et DevOps">☁️ Cloud & DevOps</h3>
+                    <ul>
+                        <li>AWS</li><li>Microsoft Azure</li><li>IAM</li><li>EC2</li><li>VPC</li><li>CI/CD</li><li>Docker</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="🐧 Linux Administration" data-fr="🐧 Administration Linux">🐧 Linux Administration</h3>
+                    <ul>
+                        <li>Red Hat Enterprise Linux</li><li>Bash</li><li>SSH</li><li>Systemd</li><li>SELinux</li><li>NFS</li><li>Firewalld</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="🌐 Networking" data-fr="🌐 Réseaux">🌐 Networking</h3>
+                    <ul>
+                        <li>Cisco</li><li>Juniper</li><li>TCP/IP</li><li>Routing & Switching</li><li>VLANs</li><li>DNS</li><li>DHCP</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="📡 Telecommunications" data-fr="📡 Télécommunications">📡 Telecommunications</h3>
+                    <ul>
+                        <li>3G</li><li>4G LTE</li><li>5G</li><li>Site Surveys</li><li>Wireless Modernization</li><li>Equipment Integration</li><li>Quality Assurance</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="🏢 Data Center Operations" data-fr="🏢 Opérations de centres de données">🏢 Data Center Operations</h3>
+                    <ul>
+                        <li>Rack & Stack</li><li>Server Deployment</li><li>Structured Cabling</li><li>Fiber Infrastructure</li><li>OTDR</li><li>Hardware Diagnostics</li><li>Remote Hands</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="💻 Software Development" data-fr="💻 Développement logiciel">💻 Software Development</h3>
+                    <ul>
+                        <li>JavaScript</li><li>TypeScript</li><li>Node.js</li><li>Express.js</li><li>Next.js</li><li>REST APIs</li><li>PostgreSQL</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="🛡️ Cybersecurity" data-fr="🛡️ Cybersécurité">🛡️ Cybersecurity</h3>
+                    <ul>
+                        <li>Security+</li><li>SOC Operations</li><li>Splunk</li><li>SIEM</li><li>Incident Response</li><li>Log Analysis</li><li>Wireshark</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-bordered">
+            <div class="section-heading">
+                <p class="section-kicker" data-en="Selected Work" data-fr="Travaux sélectionnés">Selected Work</p>
+                <h2 data-en="Featured Projects" data-fr="Projets principaux">Featured Projects</h2>
+                <p
+                    data-en="A selection of infrastructure, wireless, cloud, cybersecurity, and software projects demonstrating my hands-on experience."
+                    data-fr="Une sélection de projets d’infrastructure, de réseaux mobiles, de cloud, de cybersécurité et de logiciels illustrant mon expérience pratique."
+                >
+                    A selection of infrastructure, wireless, cloud, cybersecurity, and software projects demonstrating my hands-on experience.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3 data-en="🏢 Enterprise Data Center Deployments" data-fr="🏢 Déploiements de centres de données d’entreprise">🏢 Enterprise Data Center Deployments</h3>
+                    <p
+                        data-en="Deployed enterprise servers, network equipment, rack infrastructure, structured cabling, fiber optics, and mission-critical hardware in production data center environments."
+                        data-fr="Déploiement de serveurs d’entreprise, d’équipements réseau, d’infrastructures en rack, de câblage structuré, de fibre optique et de matériel critique dans des centres de données de production."
+                    >
+                        Deployed enterprise servers, network equipment, rack infrastructure, structured cabling, fiber optics, and mission-critical hardware in production data center environments.
+                    </p>
+                    <div class="tech-tags"><span>Data Centers</span><span>Linux</span><span>Cisco</span><span>Juniper</span><span>Fiber</span></div>
+                </article>
+
+                <article class="project-card">
+                    <h3 data-en="📡 Wireless Network Modernization" data-fr="📡 Modernisation des réseaux mobiles">📡 Wireless Network Modernization</h3>
+                    <p
+                        data-en="Supported Sprint, T-Mobile, and Verizon modernization projects involving site surveys, equipment installation, integration, testing, and 3G, 4G LTE, and 5G infrastructure upgrades."
+                        data-fr="Support de projets de modernisation Sprint, T-Mobile et Verizon comprenant les études de sites, l’installation, l’intégration et les tests d’équipements ainsi que les mises à niveau des infrastructures 3G, 4G LTE et 5G."
+                    >
+                        Supported Sprint, T-Mobile, and Verizon modernization projects involving site surveys, equipment installation, integration, testing, and 3G, 4G LTE, and 5G infrastructure upgrades.
+                    </p>
+                    <div class="tech-tags"><span>3G</span><span>4G LTE</span><span>5G</span><span>Site Survey</span><span>Integration</span></div>
+                </article>
+
+                <article class="project-card">
+                    <h3 data-en="☁️ PTFS Cloud Infrastructure Platform" data-fr="☁️ Plateforme d’infrastructure cloud PTFS">☁️ PTFS Cloud Infrastructure Platform</h3>
+                    <p
+                        data-en="A hands-on AWS and DevOps portfolio project covering IAM, EC2, networking, Linux, GitHub workflows, automation, and cloud architecture."
+                        data-fr="Projet pratique de portfolio AWS et DevOps couvrant IAM, EC2, les réseaux, Linux, les workflows GitHub, l’automatisation et l’architecture cloud."
+                    >
+                        A hands-on AWS and DevOps portfolio project covering IAM, EC2, networking, Linux, GitHub workflows, automation, and cloud architecture.
+                    </p>
+                    <div class="tech-tags"><span>AWS</span><span>DevOps</span><span>Linux</span><span>GitHub</span><span>Automation</span></div>
+                </article>
+
+                <article class="project-card">
+                    <h3>🌍 NdakoCare</h3>
+                    <p
+                        data-en="A bilingual diaspora-support platform for grocery ordering, mobile recharge, money transfer, order management, and future delivery tracking across African markets."
+                        data-fr="Plateforme bilingue destinée à la diaspora pour les commandes d’épicerie, la recharge mobile, le transfert d’argent, la gestion des commandes et le futur suivi des livraisons sur les marchés africains."
+                    >
+                        A bilingual diaspora-support platform for grocery ordering, mobile recharge, money transfer, order management, and future delivery tracking across African markets.
+                    </p>
+                    <div class="tech-tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Vercel</span><span>i18n</span></div>
+                </article>
+
+                <article class="project-card">
+                    <h3 data-en="🛒 Grocery Inventory REST API" data-fr="🛒 API REST de gestion d’inventaire d’épicerie">🛒 Grocery Inventory REST API</h3>
+                    <p
+                        data-en="Developed and deployed a Node.js, Express, and PostgreSQL REST API with filtered GET, POST, and PUT operations, tested through Postman and hosted on Render."
+                        data-fr="Développement et déploiement d’une API REST Node.js, Express et PostgreSQL avec des opérations GET filtrées, POST et PUT, testée avec Postman et hébergée sur Render."
+                    >
+                        Developed and deployed a Node.js, Express, and PostgreSQL REST API with filtered GET, POST, and PUT operations, tested through Postman and hosted on Render.
+                    </p>
+                    <div class="tech-tags"><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Postman</span><span>Render</span></div>
+                    <div class="project-links" aria-label="Grocery API links">
+                        <a class="project-action" href="https://github.com/fpaida/grocery-api" target="_blank" rel="noopener noreferrer">
+                            <span aria-hidden="true">💻</span>
+                            <span data-en="GitHub Repository" data-fr="Dépôt GitHub">GitHub Repository</span>
+                        </a>
+                        <a class="project-action" href="https://grocery-api-o3m1.onrender.com/api/v1/products" target="_blank" rel="noopener noreferrer">
+                            <span aria-hidden="true">🌐</span>
+                            <span data-en="Live API" data-fr="API en ligne">Live API</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>📦 SmartRack Passport</h3>
+                    <p
+                        data-en="A QR-code-based data center asset visibility concept designed to help technicians quickly access rack, equipment, location, and service information."
+                        data-fr="Concept de visibilité des actifs de centre de données basé sur des codes QR, conçu pour permettre aux techniciens d’accéder rapidement aux informations sur les racks, les équipements, les emplacements et les services."
+                    >
+                        A QR-code-based data center asset visibility concept designed to help technicians quickly access rack, equipment, location, and service information.
+                    </p>
+                    <div class="tech-tags"><span>Next.js</span><span>TypeScript</span><span>QR Codes</span><span>Asset Management</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-bordered">
+            <div class="section-heading">
+                <p class="section-kicker" data-en="Let’s Connect" data-fr="Restons en contact">Let’s Connect</p>
+                <h2 data-en="Contact Me" data-fr="Me contacter">Contact Me</h2>
+                <p
+                    data-en="I welcome conversations about full-time roles, contract projects, consulting, partnerships, and technical collaboration."
+                    data-fr="Je suis disponible pour échanger au sujet de postes à temps plein, de missions contractuelles, de conseil, de partenariats et de collaborations techniques."
+                >
+                    I welcome conversations about full-time roles, contract projects, consulting, partnerships, and technical collaboration.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <article class="contact-card">
+                    <h3 data-en="📧 Contact Information" data-fr="📧 Coordonnées">📧 Contact Information</h3>
+                    <p><strong data-en="Email" data-fr="Courriel">Email</strong><br><a href="mailto:fpaidas@gmail.com">fpaidas@gmail.com</a></p>
+                    <p><strong data-en="Phone" data-fr="Téléphone">Phone</strong><br><a href="tel:+14438146589">+1 (443) 814-6589</a></p>
+                    <p><strong data-en="Location" data-fr="Lieu">Location</strong><br><span data-en="Pittsburgh, Pennsylvania, USA" data-fr="Pittsburgh, Pennsylvanie, États-Unis">Pittsburgh, Pennsylvania, USA</span></p>
+                </article>
+
+                <article class="contact-card">
+                    <h3 data-en="🌐 Professional Links" data-fr="🌐 Liens professionnels">🌐 Professional Links</h3>
+                    <a class="professional-link" href="https://github.com/fpaida" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span aria-hidden="true">→</span></a>
+                    <a class="professional-link" href="https://www.linkedin.com/in/fabrice-paida-13568046/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">→</span></a>
+                    <a class="professional-link" href="https://primetechfieldsolutions.com/" target="_blank" rel="noopener noreferrer"><span>Prime Tech Field Solutions</span><span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="current-year">2026</span> Fabrice Paida</p>
+        <p
+            data-en="Telecommunications • Enterprise Infrastructure • Cloud • Linux • Software Engineering"
+            data-fr="Télécommunications • Infrastructure d’entreprise • Cloud • Linux • Génie logiciel"
+        >
+            Telecommunications • Enterprise Infrastructure • Cloud • Linux • Software Engineering
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

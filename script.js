@@ -1,94 +1,73 @@
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href"))
-            .scrollIntoView({ behavior: "smooth" });
+"use strict";
+
+document.addEventListener("DOMContentLoaded", () => {
+    const languageButtons = document.querySelectorAll(".language-btn");
+    const translatableElements = document.querySelectorAll("[data-en][data-fr]");
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    const currentYear = document.getElementById("current-year");
+
+    const setLanguage = (language) => {
+        const selectedLanguage = language === "fr" ? "fr" : "en";
+
+        document.documentElement.lang = selectedLanguage;
+
+        translatableElements.forEach((element) => {
+            const translation = element.dataset[selectedLanguage];
+            if (typeof translation === "string") {
+                element.textContent = translation;
+            }
+        });
+
+        languageButtons.forEach((button) => {
+            const isActive = button.dataset.language === selectedLanguage;
+            button.classList.toggle("active", isActive);
+            button.setAttribute("aria-pressed", String(isActive));
+        });
+
+        localStorage.setItem("portfolio-language", selectedLanguage);
+    };
+
+    languageButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            setLanguage(button.dataset.language);
+        });
     });
-});
 
-// Typing effect
-const text = [
-    "Data Center Engineer",
-    "Network Engineer",
-    "SOC Analyst"
-];
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+            document.body.classList.toggle("menu-open", isOpen);
+        });
 
-let i = 0;
-let j = 0;
-let currentText = "";
-let isDeleting = false;
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                document.body.classList.remove("menu-open");
+            });
+        });
 
-function type() {
-    currentText = text[i];
-
-    if (!isDeleting) {
-        document.getElementById("typing").textContent =
-            currentText.substring(0, j++);
-    } else {
-        document.getElementById("typing").textContent =
-            currentText.substring(0, j--);
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 880) {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                document.body.classList.remove("menu-open");
+            }
+        });
     }
 
-    if (!isDeleting && j === currentText.length) {
-        isDeleting = true;
-        setTimeout(type, 1000);
-        return;
+    if (currentYear) {
+        currentYear.textContent = String(new Date().getFullYear());
     }
 
-    if (isDeleting && j === 0) {
-        isDeleting = false;
-        i = (i + 1) % text.length;
-    }
-
-    setTimeout(type, isDeleting ? 50 : 100);
-}
-
-type();
-
-
-// Fade-in animation
-const elements = document.querySelectorAll(".fade-in");
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-}, { threshold: 0.2 });
-
-elements.forEach(el => observer.observe(el));
-
-
-// Active navbar highlight
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 100) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(a => {
-        a.classList.remove("active");
-        if (a.getAttribute("href") === "#" + current) {
-            a.classList.add("active");
-        }
-    });
-});
-
-
-// Scroll progress bar
-window.addEventListener("scroll", () => {
-    let scrollTop = document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let progress = (scrollTop / height) * 100;
-
-    document.getElementById("progress-bar").style.width = progress + "%";
+    const savedLanguage = localStorage.getItem("portfolio-language");
+    const browserLanguage = navigator.language.toLowerCase().startsWith("fr") ? "fr" : "en";
+    setLanguage(savedLanguage || browserLanguage);
 });
